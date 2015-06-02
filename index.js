@@ -12,7 +12,7 @@ app.listen(process.env.PORT || 5000);
 var config = {
     me: 'imus_online', // The authorized account with a list to retweet.
     myList: 'Imus Cavite', // The list we want to retweet.
-    regexFilter: '', // Accept only tweets matching this regex pattern.
+    regexFilter: 'Imus Cavite', // Accept only tweets matching this regex pattern.
     regexReject: '(RT|@)', // AND reject any tweets matching this regex pattern.
 
     keys: {
