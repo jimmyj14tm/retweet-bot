@@ -14,6 +14,7 @@ var config = {
     myList: 'imuscavite', // The list we want to retweet.
     regexFilter: '#imuscavite', // Accept only tweets matching this regex pattern.
     regexReject: '(RT|@)', // AND reject any tweets matching this regex pattern.
+	terms: ['testtweet'],
 
     keys: {
         consumer_key: process.env.TWITTER_CONSUMER_KEY,
@@ -23,7 +24,7 @@ var config = {
     },
 };
 
-
+/*
 // Get the members of our list, and pass them into a callback function.
 function getListMembers(callback) {
     var memberIDs = [];
@@ -96,3 +97,43 @@ var tu = require('tuiter')(config.keys);
 // Run the application. The callback in getListMembers ensures we get our list
 // of twitter streams before we attempt to listen to them via the twitter API.
 getListMembers(listen);
+*/
+
+
+// what to do after we retweet something. 
+// if it fails i really don't care unless 
+// i'm debugging
+function onReTweet(err) {
+    if(err) {
+        console.error("retweeting failed :(");
+        console.error(err);
+    }
+}
+
+// what to do when we get a tweet
+function onTweet(tweet) {
+    // if it's flagged as a retweet or has RT
+    // in there then we probably don't want 
+    // to retweet it again.
+    if (tweet.retweeted) {
+        return;
+    }
+    if (tweet.text.indexOf("RT") !== -1) {
+        return;
+    }
+    console.log("Retweeting: " + tweet.text);
+    // note we're using the id_str property since
+    // javascript is not accurate for 64bit ints
+    tu.retweet({
+        id: tweet.id_str
+    }, onReTweet);
+}
+
+var tu = require('tuiter')(config.keys);
+
+ tu.filter({
+        track: config.terms
+    }, function(stream) {
+        console.log("listening to stream");
+        stream.on('tweet', onTweet);
+    });
