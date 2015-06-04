@@ -14,7 +14,7 @@ var config = {
     myList: 'imuscavite', // The list we want to retweet.
     regexFilter: '#imuscavite', // Accept only tweets matching this regex pattern.
     regexReject: '(RT|@)', // AND reject any tweets matching this regex pattern.
-	terms: ['Imus Cavite', 'Imus City', '#imuscavite', '#imuscity'],
+	terms: ['#wis_hk'],
 
     keys: {
         consumer_key: process.env.TWITTER_CONSUMER_KEY,
