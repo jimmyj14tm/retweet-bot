@@ -1,15 +1,15 @@
 {
-  "name": "twitter-listbot",
+  "name": "retweet-bot",
   "description": "A robot that retweets the contents of a twitter list.",
   "version": "0.0.1",
-  "homepage": "https://github.com/bryanbraun/twitter-listbot",
+  "homepage": "https://github.com/jimmyj14tm/retweet-bot",
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/bryanbraun/twitter-listbot.git"
+    "url": "git://github.com/jimmyj14tm/retweet-bot.git"
   },
   "bugs": {
-    "url": "https://github.com/bryanbraun/twitter-listbot/issues"
+    "url": "https://github.com/jimmyj14tm/retweet-bot/issues"
   },
   "dependencies": {
     "tuiter": "~0.2.12",
@@ -22,9 +22,9 @@
     "npm": "1.1.x"
   },
   "author": {
-    "name": "Bryan Braun",
-    "email": "bbraun7@gmail.com",
-    "url": "http://www.bryanbraun.com"
+    "name": "Jimmy Villanueva",
+    "email": "jimmygvillanueva@gmail.com",
+    "url": "http://www.jimmygvillanueva.com"
   },
   "private": true,
   "license": "MIT"
