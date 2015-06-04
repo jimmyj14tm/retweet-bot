@@ -6,7 +6,7 @@ This is a simple twitter retweet bot, designed to retweet the contents of a twit
 This implementation tweets for [@imus_online](https://twitter.com/imus_online).
 
 ## Setup Your Own
-1. Download this repo with `git clone git@github.com:bryanbraun/retweet-bot.git`.
+1. Download this repo with `git clone git@github.com:jimmyj14tm/retweet-bot.git`.
 2. Open `index.js` and replace the values in the `config` object with your own.
 3. Create a twitter application at https://apps.twitter.com/app/new and grant it the necessary access, and generate your tokens/keys.
 4. Deploy the bot to heroku. Guide: https://devcenter.heroku.com/articles/getting-started-with-nodejs#deploy-the-app
