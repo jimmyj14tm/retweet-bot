@@ -1,9 +1,9 @@
 Retweet Bot (Node.js)
 ==================
 
-This is a simple twitter retweet bot, designed to retweet the contents of a twitter list.
+This is a simple twitter retweet bot, designed to retweet the contents of a tweet.
 
-This implementation tweets for [@imus_online](https://twitter.com/imus_online).
+This implementation tweets for [@imus_online](https://twitter.com/imus_online) and [@wis_hk](https://twitter.com/wis_hk).
 
 ## Setup Your Own
 1. Download this repo with `git clone https://github.com/jimmyj14tm/retweet-bot.git`.
